@@ -25,7 +25,7 @@ Auth::routes();
 
 //     Route::post('/login', 'Auth/LoginController@login')->name('user.login.submit');
 
-Route::get('/', 'HomeController@index')->name('prospect.dashboard');
+Route::get('/', 'HomeController@index')->name('user.dashboard');
 
 //});
 

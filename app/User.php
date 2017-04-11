@@ -9,7 +9,6 @@ class User extends Authenticatable
 {
     use Notifiable;
 
-    protected $guard = 'user';
 
     /**
      * The attributes that are mass assignable.
