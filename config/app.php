@@ -12,7 +12,7 @@ return [
     | any other location as required by the application or its packages.
     */
 
-    'name' => env('K-State Admissions CRM', 'K-STATE ADMISSIONS CRM'),
+    'name' => env('K-State Admissions Portal', 'K-STATE ADMISSIONS Portal'),
 
     /*
     |--------------------------------------------------------------------------

@@ -26,7 +26,9 @@ Auth::routes();
 //     Route::post('/login', 'Auth/LoginController@login')->name('user.login.submit');
 
 Route::get('/', 'HomeController@index')->name('user.dashboard');
+Route::get('/prospect/create', 'HomeController@create')->name('prospect.create');
 
+//Route::get('/prospects/dashboard/create', 'InformationFormController@create')->name('information.create');
 //});
 
 Route::prefix('studentworker')->group(function(){

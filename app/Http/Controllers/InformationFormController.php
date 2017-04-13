@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class HomeController extends Controller
+class InformationFormController extends Controller
 {
     /**
      * Create a new controller instance.
@@ -21,13 +21,12 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
-    {
-        return view('prospect.index');
+    public function index(){
+        return view('index');
     }
 
     public function create()
     {
-        return view('prospect.informationsheet.create');
+        return view('prospects.create');
     }
 }
