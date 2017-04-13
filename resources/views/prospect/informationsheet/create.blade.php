@@ -132,7 +132,7 @@
                                                 @endif
                                             </div>
                                         </div>
-                                        <h5><strong>BIRHTDATE *</strong></h5>
+                                        <h5><strong>BIRTHDATE *</strong></h5>
                                         <!-- Birthday -->
                                         <div class="form-group{{ $errors->has('birthday') ? ' has-error' : '' }}">
 
@@ -231,7 +231,61 @@
                                                 @endif
                                             </div>
                                         </div>
-                                        
+                                        <h5><strong>COLLEGE COURSES? </strong></h5>
+                                        <!-- Sex -->
+                                        <div class="form-group{{ $errors->has('college_credit') ? ' has-error' : '' }}">
+
+                                            <div class="col-md-4">
+                                                {!! Form::radio('college_credit', 'Yes', ['class' => 'form-control',  'autofocus' ]) !!}
+                                                 {!! Form::Label('college_credit', '   Yes', ['class' => 'control-label']) !!}
+                                                @if ($errors->has('college_credit'))
+                                                    <span class="help-block">
+                                                        <strong>{{ $errors->first('college_credit') }}</strong>
+                                                    </span>
+                                                @endif
+                                            </div>
+
+                                            <div class="col-md-4">
+                                                {!! Form::radio('college_credit', 'No', ['class' => 'form-control',  'autofocus' ]) !!}
+                                                 {!! Form::Label('college_credit', '   No', ['class' => ' control-label']) !!}
+                                                @if ($errors->has('college_credit'))
+                                                    <span class="help-block">
+                                                        <strong>{{ $errors->first('sex') }}</strong>
+                                                    </span>
+                                                @endif
+                                            </div>
+                                        </div>
+
+                                        <h5><strong>IF YES, WHAT COLLEGE?</strong></h5>
+                                        <!-- Name of College -->
+                                        <div class="form-group{{ $errors->has('college_name') ? ' has-error' : '' }}">
+
+                                            <div class="col-md-8">
+                                                {!! Form::text('college_name', '', ['class' => 'form-control', 'name' => 'college_name', 'placeholder' => 'Wichita State University', 'autofocus', 'value' => old('college_name')]) !!}
+                                                
+                                                @if ($errors->has('college_name'))
+                                                    <span class="help-block">
+                                                        <strong>{{ $errors->first('college_name') }}</strong>
+                                                    </span>
+                                                @endif
+                                            </div>
+                                        </div>                                           
+
+                                        <h5><strong>MAJOR OF INTEREST (1ST CHOICE) *</strong></h5>
+                                        <!-- Start Date -->
+                                        <div class="form-group{{ $errors->has('primary_major') ? ' has-error' : '' }}">
+
+                                            <div class="col-md-4">
+                                                {!! Form::select('primary_major', ['Airport Management' => 'Fall', 'Applied Business' => 'Spring', 'Summer' => 'Summer', '' => '', '' => ''], ['class' => 'form-control', 'name' => 'primary_major', 'required', 'autofocus', 'value' => old('primary_major')]) !!}
+                                                
+                                                @if ($errors->has('primary_major'))
+                                                    <span class="help-block">
+                                                        <strong>{{ $errors->first('primary_major') }}</strong>
+                                                    </span>
+                                                @endif
+                                            </div>
+                                        </div>
+
                                         <div class="form-group">
                                             <div class="col-md-8 col-md-offset-4">
                                                 <button type="submit" class="btn btn-primary">
