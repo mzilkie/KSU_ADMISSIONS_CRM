@@ -29,4 +29,9 @@ class InformationFormController extends Controller
     {
         return view('prospects.create');
     }
+
+    public function createSubmit()
+    {
+        $prospect = DB::InformationForm();
+    }
 }
