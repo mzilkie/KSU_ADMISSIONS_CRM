@@ -13,7 +13,7 @@
                             <div class="row">
                                 <div class="col-lg-12">
 
-                                   {!! Form::open(['class' => 'form-horizontal', 'method' => 'POST',  'role' =>'form']) !!}
+                                   {!! FORM::open(['class' => 'form-horizontal', 'method' => 'POST',  'role' =>'form']) !!}
                                         
                                         @include ('layouts.informationsheet')
 

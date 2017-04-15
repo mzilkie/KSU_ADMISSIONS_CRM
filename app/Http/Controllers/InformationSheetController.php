@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class InformationFormController extends Controller
+class InformationSheetController extends Controller
 {
     /**
      * Create a new controller instance.
@@ -22,7 +22,7 @@ class InformationFormController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index(){
-        return view('index');
+        return view('prospect.index');
     }
 
     public function create()
@@ -30,8 +30,10 @@ class InformationFormController extends Controller
         return view('prospects.create');
     }
 
-    public function createSubmit()
+    public function store(InformationFormRequest $request)
     {
-        $prospect = DB::InformationForm();
+        $prospect = DB::InformationForm($request->all());
+
+        return view('prospect.index', compact('prospect'));
     }
 }

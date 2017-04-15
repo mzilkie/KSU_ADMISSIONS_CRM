@@ -3,6 +3,7 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Carbon\Carbon;
 
 class InformationSheet extends Model
 {
@@ -27,4 +28,14 @@ class InformationSheet extends Model
     protected $hidden = [
         
     ];
+
+    public function scopeInformationSheet($query)
+    {
+        $query->where('created_at', '>=', 'Carbon::now(-10)')
+    }
+
+    public function user()
+    {
+        return $this->belongsTo('APP\User');
+    }
 }

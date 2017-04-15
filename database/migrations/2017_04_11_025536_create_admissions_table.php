@@ -15,7 +15,7 @@ class CreateAdmissionsTable extends Migration
     {
         Schema::create('admissions', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('name');
+            $table->string('user_id')->unique();
             $table->string('email')->unique();
             $table->string('password');
             $table->rememberToken();

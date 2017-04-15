@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateInformationsheetTable extends Migration
+class CreateInformationSheetsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,9 @@ class CreateInformationsheetTable extends Migration
      */
     public function up()
     {
-        Schema::create('informationsheet', function (Blueprint $table) {
+        Schema::create('information_sheets', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('user_id')->unique();
             $table->string('firstName');
             $table->string('lastName');
             $table->string('streetAddress');
@@ -38,7 +39,11 @@ class CreateInformationsheetTable extends Migration
             $table->string('other_hear')->nullable();
             $table->string('contact');
             $table->timestamps();
-            $table->foreign('email')->references('email')->on('users');
+
+            $table->foreign('user_id')
+                  ->references('user_id')
+                  ->on('users')
+                  ->onDelete('cascade');
         });
     }
 
@@ -49,6 +54,6 @@ class CreateInformationsheetTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('InformationSheet');
+        Schema::dropIfExists('information_sheets');
     }
 }
