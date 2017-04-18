@@ -93,20 +93,20 @@
                             <!-- /input-group -->
                         </li>
                         <li>
-                            <a href="prospect.index"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
+                            <a href="{{ route('prospect.index') }}"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
                         </li>
                         <li>
                             <a href="#"><i class="fa fa-user fa-fw"></i> Information Form<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
-                                {{-- <li>
+                                <li>
                                     <a href="{{ route('prospect.informationsheet.show') }}">View</a>
-                                </li> --}}
+                                </li>
                                 <li>
                                     <a href="{{ route('prospect.informationsheet.create') }}">Create</a>
                                 </li>
-                                {{-- <li>
+                                <li>
                                     <a href="{{ route('prospect.informationsheet.edit') }}">Edit</a>
-                                </li> --}}
+                                </li>
                             </ul>
                             <!-- /.nav-second-level -->
                         </li>

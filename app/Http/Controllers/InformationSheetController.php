@@ -22,12 +22,12 @@ class InformationSheetController extends Controller
      * @return \Illuminate\Http\Response
      */
 
-//    public function index()
-//    {
-//        $informationSheet = Request::all();
-//
-//        return view('prospect.informationsheet.index', compact('informationSheet'));
-//    }
+    public function index()
+    {
+        //$informationSheet = Information::findOrFail(Request::all());
+
+        return view('prospect.informationsheet.index');
+    }
 
     public function show($id)
     {

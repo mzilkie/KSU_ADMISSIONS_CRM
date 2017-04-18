@@ -12,10 +12,7 @@
                             <!-- /.row -->
             <div class="row">
                 <div class="col-lg-12">
-                    @if
-                        
-                    @endif
- 
+                    Hello
                 </div>
                                 <!-- /.col-lg-12 (nested) -->
             </div>

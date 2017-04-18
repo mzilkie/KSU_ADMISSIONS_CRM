@@ -30,14 +30,14 @@ Route::get('/', 'HomeController@index')->name('prospect.index');
 // Information Sheet routes
 
 
-    //Route::get('/prospect/informationsheet', 'InformationSheetController@index')->name('prospect.informationsheet.index');
-    Route::get('/prospect/informationsheet/create', 'InformationSheetController@create')->name('prospect.informationsheet.create');
-    Route::get('/prospect/informationsheet/{id}', 'InformationSheetController@show')->name('prospect.informationsheet.show');
-    Route::post('/prospect', 'InformationSheetController@store')->name('prospect.informationsheet.store');
-    Route::post('/prospect/informationsheet/{id}/edit', 'InformationSheetController@edit')->name('prospect.informationsheet.edit');
+  //  Route::get('/prospect/informationsheet', 'InformationSheetController@index')->name('prospect.informationsheet.index');
+  //  Route::get('/prospect/informationsheet/create', 'InformationSheetController@create')->name('prospect.informationsheet.create');
+  //  Route::get('/prospect/informationsheet/{id}', 'InformationSheetController@show')->name('prospect.informationsheet.show');
+  //  Route::post('/prospect', 'InformationSheetController@store')->name('prospect.informationsheet.store');
+  //  Route::post('/prospect/informationsheet/{id}/edit', 'InformationSheetController@edit')->name('prospect.informationsheet.edit');
 
 
-//Route::resource('prospect/informationsheet', 'InformationSheetController');
+Route::resource('prospect/informationsheet', 'InformationSheetController');
 
 Route::prefix('studentworker')->group(function(){
     
