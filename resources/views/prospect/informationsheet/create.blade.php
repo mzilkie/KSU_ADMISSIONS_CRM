@@ -13,11 +13,19 @@
                             <div class="row">
                                 <div class="col-lg-12">
 
-                                   {!! FORM::open(['class' => 'form-horizontal', 'method' => 'POST',  'role' =>'form']) !!}
+                                   @if ($errors->any())
+                                        <ul class="alert alert-danger">
+                                            @foreach( $errors->all() as $error)
+                                                <li>{{ $error }}</li>
+                                            @endforeach
+                                        </ul>
+                                    @endif
+
+                                   {!! Form::open(['class' => 'form-horizontal', 'method' => 'post', route('prospect.informationsheet.store'), 'role' =>'form']) !!}
                                         
                                         @include ('layouts.informationsheet')
 
-                                   {!! FORM::close() !!}
+                                   {!! Form::close() !!}
  
                                 </div>
                                 <!-- /.col-lg-12 (nested) -->

@@ -21,19 +21,38 @@ class InformationSheetController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index(){
-        return view('prospect.index');
+
+//    public function index()
+//    {
+//        $informationSheet = Request::all();
+//
+//        return view('prospect.informationsheet.index', compact('informationSheet'));
+//    }
+
+    public function show($id)
+    {
+        $informationSheet = InformationSheet::findOrFail($id);
+
+        return view( 'prospect.informationsheet.show', compact('informationSheet'));
     }
 
     public function create()
     {
-        return view('prospects.create');
+        return view('prospect.informationsheet.create');
     }
 
-    public function store(InformationFormRequest $request)
+    public function store(CreateInformationSheetRequest $request)
     {
-        $prospect = DB::InformationForm($request->all());
+        InformationSheet::create($request->all());
 
-        return view('prospect.index', compact('prospect'));
+        return redirect('prospect.index');
     }
+
+    public function edit($id)
+    {
+        $informationSheet = InformationSheet::findOrFail($id);
+
+        return view('prospect.informationsheet.edit', compact('informationSheet'));
+    }
+
 }

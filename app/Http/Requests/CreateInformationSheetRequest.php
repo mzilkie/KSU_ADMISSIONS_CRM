@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class InformationSheetRequest extends FormRequest
+class CreateInformationSheetRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -35,8 +35,6 @@ class InformationSheetRequest extends FormRequest
             'country' => 'required',
             'sex' => 'required',
             'birthday' => 'required|date',
-            'email' => 'required|email',
-            ''
         ];
     }
 }

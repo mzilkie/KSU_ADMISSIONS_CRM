@@ -7,18 +7,26 @@
             <div class="panel panel-default">
                 <div class="panel-heading">Register</div>
                 <div class="panel-body">
+                    @if($errors->any())
+                        <ul class='alert alert-danger'>
+                            @foreach( $errors->all() as $error)
+                                <li>{{ $error }}</li>
+                            @endforeach
+                        </ul>
+                    @endif
+
                     <form class="form-horizontal" role="form" method="POST" action="{{ route('register') }}">
                         {{ csrf_field() }}
 
-                        <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
+                        <div class="form-group{{ $errors->has('user_id') ? ' has-error' : '' }}">
                             <label for="name" class="col-md-4 control-label">Name</label>
 
                             <div class="col-md-6">
-                                <input id="name" type="text" class="form-control" name="name" value="{{ old('name') }}" required autofocus>
+                                <input id="name" type="text" class="form-control" name="user_id" value="{{ old('user_id') }}" required autofocus>
 
-                                @if ($errors->has('name'))
+                                @if ($errors->has('user_id'))
                                     <span class="help-block">
-                                        <strong>{{ $errors->first('name') }}</strong>
+                                        <strong>{{ $errors->first('user_id') }}</strong>
                                     </span>
                                 @endif
                             </div>

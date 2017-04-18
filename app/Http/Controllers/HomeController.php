@@ -25,9 +25,4 @@ class HomeController extends Controller
     {
         return view('prospect.index');
     }
-
-    public function create()
-    {
-        return view('prospect.informationsheet.create');
-    }
 }

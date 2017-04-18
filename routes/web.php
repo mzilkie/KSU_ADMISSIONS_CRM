@@ -25,11 +25,19 @@ Auth::routes();
 
 //     Route::post('/login', 'Auth/LoginController@login')->name('user.login.submit');
 
-Route::get('/', 'HomeController@index')->name('user.dashboard');
-Route::get('/prospect/create', 'HomeController@create')->name('prospect.create');
+Route::get('/', 'HomeController@index')->name('prospect.index');
 
-//Route::get('/prospects/dashboard/create', 'InformationFormController@create')->name('information.create');
-//});
+// Information Sheet routes
+
+
+    //Route::get('/prospect/informationsheet', 'InformationSheetController@index')->name('prospect.informationsheet.index');
+    Route::get('/prospect/informationsheet/create', 'InformationSheetController@create')->name('prospect.informationsheet.create');
+    Route::get('/prospect/informationsheet/{id}', 'InformationSheetController@show')->name('prospect.informationsheet.show');
+    Route::post('/prospect', 'InformationSheetController@store')->name('prospect.informationsheet.store');
+    Route::post('/prospect/informationsheet/{id}/edit', 'InformationSheetController@edit')->name('prospect.informationsheet.edit');
+
+
+//Route::resource('prospect/informationsheet', 'InformationSheetController');
 
 Route::prefix('studentworker')->group(function(){
     

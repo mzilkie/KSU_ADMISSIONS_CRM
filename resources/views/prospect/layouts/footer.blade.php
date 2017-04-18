@@ -1,3 +1,12 @@
+            </div>
+            <!-- /.panel -->
+        </div>
+        <!-- /.col-lg-8 -->
+        </div>
+        <!-- /.col-lg-4 -->
+    </div>
+<!-- /#page-wrapper -->
+
 </div>
     <!-- /#wrapper -->
 

@@ -13,9 +13,9 @@
                             <div class="row">
                                 <div class="col-lg-12">
 
-                                   {!! Form::model([ $prospect, ['route' => [ 'prospect.update', $prospect ]]]) !!}
+                                   {!! Form::model([ $informationsheet, ['route' => [ 'prospect.informationsheet.edit', $informationsheet ]]]) !!}
                                         
-                                        @include ('layouts.informationsheet')
+                                        @include ('prospects.layouts.informationsheet')
 
                                    {!! FORM::close() !!}
  

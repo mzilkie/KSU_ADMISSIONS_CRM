@@ -38,7 +38,7 @@
 <div class="form-group{{ $errors->has('streetAddress2') ? ' has-error' : '' }}">
 
     <div class="col-md-8">
-        {!! Form::text('streetAddress2', '', ['class' => 'form-control', 'name' => 'streetAddress2', 'placeholder' => 'Street Address 2', 'required', 'autofocus', 'value' => old('streetAddress2')]) !!}
+        {!! Form::text('streetAddress2', '', ['class' => 'form-control', 'name' => 'streetAddress2', 'placeholder' => 'Street Address 2', 'autofocus', 'value' => old('streetAddress2')]) !!}
         
         @if ($errors->has('streetAddress2'))
             <span class="help-block">
@@ -144,20 +144,7 @@
         @endif
     </div>
 </div>
-<h5><strong>EMAIL *</strong></h5>
-<!-- Email -->
-<div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
 
-    <div class="col-md-8">
-        {!! Form::text('email', '', ['class' => 'form-control', 'name' => 'email', 'placeholder' => 'john@doe.com', 'autofocus', 'value' => old('email')]) !!}
-        
-        @if ($errors->has('email'))
-            <span class="help-block">
-                <strong>{{ $errors->first('email') }}</strong>
-            </span>
-        @endif
-    </div>
-</div>
 <h5><strong>SECONDARY SCHOOL TYPE *</strong></h5>
 <!-- Sex -->
 <div class="form-group{{ $errors->has('secondary_school') ? ' has-error' : '' }}">
@@ -341,8 +328,6 @@
 </div>
 <div class="form-group">
     <div class="col-md-8 col-md-offset-4">
-        <button type="submit" class="btn btn-primary">
-            Submit
-        </button>
+        {{ Form::submit('Submit', ['class' => 'btn btn-primary'])}}
     </div>
 </div>

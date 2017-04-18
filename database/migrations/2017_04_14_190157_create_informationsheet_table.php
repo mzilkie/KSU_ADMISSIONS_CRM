@@ -13,7 +13,7 @@ class CreateInformationSheetsTable extends Migration
      */
     public function up()
     {
-        Schema::create('information_sheets', function (Blueprint $table) {
+        Schema::create('informationsheet', function (Blueprint $table) {
             $table->increments('id');
             $table->string('user_id')->unique();
             $table->string('firstName');
@@ -26,7 +26,6 @@ class CreateInformationSheetsTable extends Migration
             $table->string('country');
             $table->string('sex');
             $table->dateTime('birthday');
-            $table->string('email');
             $table->string('secondary_school');
             $table->string('start_month');
             $table->integer('start_year');
@@ -54,6 +53,6 @@ class CreateInformationSheetsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('information_sheets');
+        Schema::dropIfExists('informationsheet');
     }
 }

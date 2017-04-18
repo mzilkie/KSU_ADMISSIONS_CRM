@@ -11,13 +11,14 @@ class InformationSheet extends Model
 
     protected $guard = 'studentworker, admin, admissions, users';
     
+    protected $dates = ['published_at'];
     /**
      * The attributes that are mass assignable.
      *
      * @var array
      */
     protected $fillable = [
-        'firstName', 'lastName', 'streetAddress', 'streetAddress2', 'city', 'state', 'zipcode', 'country', 'sex', 'phone', 'birthday', 'email', 'secondary_school', 'start_month', 'start_year', 'college_credit', 'college_name', 'primary_major', 'secondary_major', 'other_interest', 'hear_about_us', 'other_hear', 'contact' ,
+        'firstName', 'lastName', 'streetAddress', 'streetAddress2', 'city', 'state', 'zipcode', 'country', 'sex', 'phone', 'birthday', 'secondary_school', 'start_month', 'start_year', 'college_credit', 'college_name', 'primary_major', 'secondary_major', 'other_interest', 'hear_about_us', 'other_hear', 'contact' ,
     ];
 
     /**
@@ -29,9 +30,9 @@ class InformationSheet extends Model
         
     ];
 
-    public function scopeInformationSheet($query)
+    public function setPublishedAtAttribut($date)
     {
-        $query->where('created_at', '>=', 'Carbon::now(-10)')
+        $this->attributes['published_at'] = Carbon::createFromFormat('Y-m-d', $date);
     }
 
     public function user()
