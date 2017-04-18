@@ -31,9 +31,9 @@ class InformationSheetController extends Controller
 
     public function show($id)
     {
-        $informationSheet = InformationSheet::findOrFail($id);
+        $informationsheet = InformationSheet::findOrFail($id);
 
-        return view( 'prospect.informationsheet.show', compact('informationSheet'));
+        return view( 'prospect.informationsheet.show', compact('informationsheet'));
     }
 
     public function create()
@@ -50,9 +50,9 @@ class InformationSheetController extends Controller
 
     public function edit($id)
     {
-        $informationSheet = InformationSheet::findOrFail($id);
+        $informationsheet = InformationSheet::findOrFail($id);
 
-        return view('prospect.informationsheet.edit', compact('informationSheet'));
+        return view('prospect.informationsheet.edit', compact('informationsheet'));
     }
 
 }
