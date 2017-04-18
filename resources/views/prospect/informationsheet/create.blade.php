@@ -21,7 +21,7 @@
                                         </ul>
                                     @endif
 
-                                   {!! Form::open(['class' => 'form-horizontal', 'method' => 'post', route('prospect.informationsheet.store'), 'role' =>'form']) !!}
+                                   {!! Form::open(['class' => 'form-horizontal', 'method' => 'post', 'role' =>'form']) !!}
                                         
                                         @include ('layouts.informationsheet')
 

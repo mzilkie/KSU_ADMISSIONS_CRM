@@ -99,13 +99,13 @@
                             <a href="#"><i class="fa fa-user fa-fw"></i> Information Form<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
-                                    <a href="{{ route('prospect.informationsheet.show') }}">View</a>
+                                    <a href="{{ url('prospect/informationsheet/') }}">View</a>
                                 </li>
                                 <li>
-                                    <a href="{{ route('prospect.informationsheet.create') }}">Create</a>
+                                    <a href="{{ url('prospect/informationsheet/create') }}">Create</a>
                                 </li>
                                 <li>
-                                    <a href="{{ route('prospect.informationsheet.edit') }}">Edit</a>
+                                    <a href="">Edit</a>
                                 </li>
                             </ul>
                             <!-- /.nav-second-level -->

@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use App\InformationSheet;
 class InformationSheetController extends Controller
 {
     /**
@@ -24,7 +24,7 @@ class InformationSheetController extends Controller
 
     public function index()
     {
-        //$informationSheet = Information::findOrFail(Request::all());
+        //$informationSheet = Request::all();
 
         return view('prospect.informationsheet.index');
     }

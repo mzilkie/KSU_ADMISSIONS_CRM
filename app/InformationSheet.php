@@ -4,6 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 use Carbon\Carbon;
+use Illuminate\Notifications\Notifiable;
 
 class InformationSheet extends Model
 {
@@ -18,7 +19,7 @@ class InformationSheet extends Model
      * @var array
      */
     protected $fillable = [
-        'firstName', 'lastName', 'streetAddress', 'streetAddress2', 'city', 'state', 'zipcode', 'country', 'sex', 'phone', 'birthday', 'secondary_school', 'start_month', 'start_year', 'college_credit', 'college_name', 'primary_major', 'secondary_major', 'other_interest', 'hear_about_us', 'other_hear', 'contact' ,
+        'firstName', 'lastName', 'streetAddress', 'streetAddress2', 'city', 'state', 'zipcode', 'country', 'sex', 'phone', 'birthday', 'secondary_school', 'start_month', 'start_year', 'college_credit', 'college_name', 'primary_major', 'secondary_major', 'other_interest', 'hear_about_us', 'other_hear', 'contact'
     ];
 
     /**
@@ -35,8 +36,8 @@ class InformationSheet extends Model
         $this->attributes['published_at'] = Carbon::createFromFormat('Y-m-d', $date);
     }
 
-    public function user()
-    {
-        return $this->belongsTo('APP\User');
-    }
+    //public function user()
+    //{
+    //    return $this->belongsTo('APP\User');
+    //}
 }
